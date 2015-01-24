@@ -7,11 +7,10 @@ PHP functions
 Prerequisites
 -------------
 
-Install the idnkit-2 library from JPRS
+- Install the idnkit-2.3 library from JPRS http://jprs.co.jp/idn/index-e.html
+- You need the PHP5 developer tools in order to build the extension.
 
-You can get the latest version here:
-http://jprs.co.jp/idn/index-e.html
 
-php-idna works with idnkit-2.3
+
 
 
