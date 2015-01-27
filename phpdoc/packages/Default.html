@@ -1,0 +1,648 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>php-idna2 » Default</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+<link rel="stylesheet" href="../hack.css"></head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">php-idna2</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">12</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/Default.html" title="Default"><i class="icon-folder-open"></i>Default</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i title="Functions" class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function_idna2_decode" title="idna2_decode() :: Generic IDNA 2008 domain decoding."><span class="description">Generic IDNA 2008 domain decoding.</span><pre>idna2_decode</pre></a></li>
+<li class="function  "><a href="#function_idna2_encode" title="idna2_encode() :: Generic IDNA 2008 domain encoding."><span class="description">Generic IDNA 2008 domain encoding.</span><pre>idna2_encode</pre></a></li>
+<li class="function  "><a href="#function_idna2_error" title="idna2_error() :: Get error message from last function call."><span class="description">Get error message from last function call.</span><pre>idna2_error</pre></a></li>
+<li class="function  "><a href="#function_idna2_from_utf8" title="idna2_from_utf8() :: Convert an UTF-8 encoded string to an array of Unicode code points."><span class="description">Convert an UTF-8 encoded string to an array of Unicode code points.</span><pre>idna2_from_utf8</pre></a></li>
+<li class="function  "><a href="#function_idna2_labels" title="idna2_labels() :: Split a domain name into labels."><span class="description">Split a domain name into labels.</span><pre>idna2_labels</pre></a></li>
+<li class="function  "><a href="#function_idna2_nameprep" title="idna2_nameprep() :: Apply the Nameprep Algorithm (IDNA 2003)."><span class="description">Apply the Nameprep Algorithm (IDNA 2003).</span><pre>idna2_nameprep</pre></a></li>
+<li class="function  "><a href="#function_idna2_punycode_decode" title="idna2_punycode_decode() :: Decode an ASCII string by way of the Puncode algorithm."><span class="description">Decode an ASCII string by way of the Puncode algorithm.</span><pre>idna2_punycode_decode</pre></a></li>
+<li class="function  "><a href="#function_idna2_punycode_encode" title="idna2_punycode_encode() :: Apply the Puncode algorithm to a UTF-8 string."><span class="description">Apply the Puncode algorithm to a UTF-8 string.</span><pre>idna2_punycode_encode</pre></a></li>
+<li class="function  "><a href="#function_idna2_test" title="idna2_test() :: Test an UTF-8 encoded string against various IDNA requirements, specified by the flags parameter."><span class="description">Test an UTF-8 encoded string against various IDNA requirements, specified by the flags parameter.</span><pre>idna2_test</pre></a></li>
+<li class="function  "><a href="#function_idna2_to_ascii" title="idna2_to_ascii() :: IDNA 2003 ToAscii method."><span class="description">IDNA 2003 ToAscii method.</span><pre>idna2_to_ascii</pre></a></li>
+<li class="function  "><a href="#function_idna2_to_unicode" title="idna2_to_unicode() :: IDNA 2003 ToUnicode method."><span class="description">IDNA 2003 ToUnicode method.</span><pre>idna2_to_unicode</pre></a></li>
+<li class="function  "><a href="#function_idna2_to_utf8" title="idna2_to_utf8() :: Get UTF-8 encoded string from an array of Unicode codepoints."><span class="description">Get UTF-8 encoded string from an array of Unicode codepoints.</span><pre>idna2_to_utf8</pre></a></li>
+<li class="nav-header">
+<i title="Constants" class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_2008_LOOKUP" title="IDNA2_CHECK_2008_LOOKUP() :: Check requirements as specified by the IDNA 2008 lookup protocol."><span class="description">Check requirements as specified by the IDNA 2008 lookup protocol.</span><pre>IDNA2_CHECK_2008_LOOKUP</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_2008_REGIST" title="IDNA2_CHECK_2008_REGIST() :: Check requirements as specified by the IDNA 2008 registration protocol."><span class="description">Check requirements as specified by the IDNA 2008 registration protocol.</span><pre>IDNA2_CHECK_2008_REGIST</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_ASCII" title="IDNA2_CHECK_ASCII() :: Check whether the string contains non-ASCII characters."><span class="description">Check whether the string contains non-ASCII characters.</span><pre>IDNA2_CHECK_ASCII</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_BIDI" title="IDNA2_CHECK_BIDI() :: Check requirements specified in [IDNA2008-BIDI]."><span class="description">Check requirements specified in [IDNA2008-BIDI].</span><pre>IDNA2_CHECK_BIDI</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_COMBINING" title="IDNA2_CHECK_COMBINING() :: Check for labels beginning with a combining mark."><span class="description">Check for labels beginning with a combining mark.</span><pre>IDNA2_CHECK_COMBINING</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_CONTEXTJ" title="IDNA2_CHECK_CONTEXTJ() :: Check CONTEXTJ code points."><span class="description">Check CONTEXTJ code points.</span><pre>IDNA2_CHECK_CONTEXTJ</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_CONTEXTO_LOOKUP" title="IDNA2_CHECK_CONTEXTO_LOOKUP() :: Check CONTEXTO code points for the lookup protocol."><span class="description">Check CONTEXTO code points for the lookup protocol.</span><pre>IDNA2_CHECK_CONTEXTO_LOOKUP</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_CONTEXTO_REGIST" title="IDNA2_CHECK_CONTEXTO_REGIST() :: Check CONTEXTO code points for the registration protocol."><span class="description">Check CONTEXTO code points for the registration protocol.</span><pre>IDNA2_CHECK_CONTEXTO_REGIST</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_HYPHEN" title="IDNA2_CHECK_HYPHEN() :: Check whether the string does not start nor end with HYPHEN_MINUS '-'."><span class="description">Check whether the string does not start nor end with HYPHEN_MINUS '-'.</span><pre>IDNA2_CHECK_HYPHEN</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_HYPHEN34" title="IDNA2_CHECK_HYPHEN34() :: Check whether the string contains HYPHEN_MINUS '-' at the 3rd and 4th position."><span class="description">Check whether the string contains HYPHEN_MINUS '-' at the 3rd and 4th position.</span><pre>IDNA2_CHECK_HYPHEN34</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_LDH" title="IDNA2_CHECK_LDH() :: Apply checks for non-LDH ASCII characters."><span class="description">Apply checks for non-LDH ASCII characters.</span><pre>IDNA2_CHECK_LDH</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_LENGTH" title="IDNA2_CHECK_LENGTH() :: Apply length checks on labels and domain names according to the IDNA standard."><span class="description">Apply length checks on labels and domain names according to the IDNA standard.</span><pre>IDNA2_CHECK_LENGTH</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_NFC" title="IDNA2_CHECK_NFC() :: Check labels are in NFC."><span class="description">Check labels are in NFC.</span><pre>IDNA2_CHECK_NFC</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_PROHIBITED" title="IDNA2_CHECK_PROHIBITED() :: Check for PROHIBITED code points."><span class="description">Check for PROHIBITED code points.</span><pre>IDNA2_CHECK_PROHIBITED</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_STD3" title="IDNA2_CHECK_STD3() :: Check for Std3 ASCII rules."><span class="description">Check for Std3 ASCII rules.</span><pre>IDNA2_CHECK_STD3</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_CHECK_UNASSIGNED" title="IDNA2_CHECK_UNASSIGNED() :: Check for UNASSIGNED code points."><span class="description">Check for UNASSIGNED code points.</span><pre>IDNA2_CHECK_UNASSIGNED</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_MAP_IDNA2003" title="IDNA2_MAP_IDNA2003() :: Perform IDNA 2003 mapping procedures."><span class="description">Perform IDNA 2003 mapping procedures.</span><pre>IDNA2_MAP_IDNA2003</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_MAP_IDNA2008" title="IDNA2_MAP_IDNA2008() :: Perform IDNA 2008 mapping procedures."><span class="description">Perform IDNA 2008 mapping procedures.</span><pre>IDNA2_MAP_IDNA2008</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_MAP_NAMEPREP" title="IDNA2_MAP_NAMEPREP() :: Apply the IDNA 2003 Nameprep algorithm."><span class="description">Apply the IDNA 2003 Nameprep algorithm.</span><pre>IDNA2_MAP_NAMEPREP</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_MAP_NFCLOWER" title="IDNA2_MAP_NFCLOWER() :: Apply Unicode normalization form C and map characters to lower case."><span class="description">Apply Unicode normalization form C and map characters to lower case.</span><pre>IDNA2_MAP_NFCLOWER</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_MAP_NFKC" title="IDNA2_MAP_NFKC() :: Normalize strings with the Unicode Normalization form KC."><span class="description">Normalize strings with the Unicode Normalization form KC.</span><pre>IDNA2_MAP_NFKC</pre></a></li>
+<li class="constant  "><a href="#constant_IDNA2_MAP_PUNYCODE" title="IDNA2_MAP_PUNYCODE() :: Apply the Punycode algorithm."><span class="description">Apply the Punycode algorithm.</span><pre>IDNA2_MAP_PUNYCODE</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li class="active"><a href="../packages/Default.html">Default</a></li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Functions" class="icon-custom icon-function"></i> Functions</h3>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_decode"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_decode " data-toggle="collapse" data-target=".function_idna2_decode .collapse" title="">
+<h2>Generic IDNA 2008 domain decoding.</h2>
+<pre>idna2_decode(string $domain) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_encode"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_encode " data-toggle="collapse" data-target=".function_idna2_encode .collapse" title="">
+<h2>Generic IDNA 2008 domain encoding.</h2>
+<pre>idna2_encode(string $domain) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_error"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_error " data-toggle="collapse" data-target=".function_idna2_error .collapse" title="">
+<h2>Get error message from last function call.</h2>
+<pre>idna2_error() : string | false</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>false</code>
+</div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_from_utf8"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_from_utf8 " data-toggle="collapse" data-target=".function_idna2_from_utf8 .collapse" title="">
+<h2>Convert an UTF-8 encoded string to an array of Unicode code points.</h2>
+<pre>idna2_from_utf8(string $label) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="%5Cidna2_to_utf8"></a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$label</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_labels"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_labels " data-toggle="collapse" data-target=".function_idna2_labels .collapse" title="">
+<h2>Split a domain name into labels.</h2>
+<pre>idna2_labels(string $domain) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The IDNA label delimiters '.', U+3002, U+FF0E, U+FF61 are considered.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_nameprep"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_nameprep " data-toggle="collapse" data-target=".function_idna2_nameprep .collapse" title="">
+<h2>Apply the Nameprep Algorithm (IDNA 2003).</h2>
+<pre>idna2_nameprep(string $domain, boolean $allowUnassigned<code> = false</code>) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$allowUnassigned</h4>
+<code>boolean</code><p>Whether to allow UNASSIGNED code points.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_punycode_decode"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_punycode_decode " data-toggle="collapse" data-target=".function_idna2_punycode_decode .collapse" title="">
+<h2>Decode an ASCII string by way of the Puncode algorithm.</h2>
+<pre>idna2_punycode_decode(string $label) : string | false</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note that strings are considered without the "xn--" prefix here.</p>
+<p>This is the reverse of <a href="/namespaces/default.html#function_idna2_punycode_encode">idna2_punycode_encode()</a></p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$label</h4>
+<code>string</code><p>Encoded ASCII label</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>false</code>
+</div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_punycode_encode"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_punycode_encode " data-toggle="collapse" data-target=".function_idna2_punycode_encode .collapse" title="">
+<h2>Apply the Puncode algorithm to a UTF-8 string.</h2>
+<pre>idna2_punycode_encode(string $label) : string | false</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note that strings are considered without the "xn--" prefix here.</p>
+<p>This is the reverse of <a href="/namespaces/default.html#function_idna2_punycode_decode">idna2_punycode_decode()</a></p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$label</h4>
+<code>string</code><p>Unicode label</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>false</code>
+</div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_test"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_test " data-toggle="collapse" data-target=".function_idna2_test .collapse" title="">
+<h2>Test an UTF-8 encoded string against various IDNA requirements, specified by the flags parameter.</h2>
+<pre>idna2_test(string $domain, integer $flags) : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The return value contains</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="%5CIDNA2_*">constants</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$flags</h4>
+<code>integer</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_to_ascii"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_to_ascii " data-toggle="collapse" data-target=".function_idna2_to_ascii .collapse" title="">
+<h2>IDNA 2003 ToAscii method.</h2>
+<pre>idna2_to_ascii(string $domain, boolean $allowUnassigned<code> = false</code>, boolean $useStd3Ascii<code> = true</code>) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$allowUnassigned</h4>
+<code>boolean</code><p>Whether to allow UNASSIGNED code points.</p></div>
+<div class="subelement argument">
+<h4>$useStd3Ascii</h4>
+<code>boolean</code><p>Whether to apply Std3ASCII rules.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_to_unicode"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_to_unicode " data-toggle="collapse" data-target=".function_idna2_to_unicode .collapse" title="">
+<h2>IDNA 2003 ToUnicode method.</h2>
+<pre>idna2_to_unicode(string $domain, boolean $allowUnassigned<code> = false</code>, boolean $useStd3Ascii<code> = true</code>) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$allowUnassigned</h4>
+<code>boolean</code><p>Whether to allow UNASSIGNED code points.</p></div>
+<div class="subelement argument">
+<h4>$useStd3Ascii</h4>
+<code>boolean</code><p>Whether to apply Std3ASCII rules.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_idna2_to_utf8"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_idna2_to_utf8 " data-toggle="collapse" data-target=".function_idna2_to_utf8 .collapse" title="">
+<h2>Get UTF-8 encoded string from an array of Unicode codepoints.</h2>
+<pre>idna2_to_utf8(array $codepoints) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This is the reverse of <a href="/namespaces/default.html#function_idna2_from_utf8">idna2_from_utf8()</a>.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="%5Cidna2_from_utf8"></a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$codepoints</h4>
+<code>array</code><p>An array of integers representing Unicode code points.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<h3>
+<i title="Constants" class="icon-custom icon-constant"></i> Constants</h3>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_2008_LOOKUP"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_2008_LOOKUP" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_2008_LOOKUP .collapse" title="">
+<h2>Check requirements as specified by the IDNA 2008 lookup protocol.</h2>
+<pre>IDNA2_CHECK_2008_LOOKUP = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_2008_REGIST"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_2008_REGIST" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_2008_REGIST .collapse" title="">
+<h2>Check requirements as specified by the IDNA 2008 registration protocol.</h2>
+<pre>IDNA2_CHECK_2008_REGIST = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_ASCII"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_ASCII" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_ASCII .collapse" title="">
+<h2>Check whether the string contains non-ASCII characters.</h2>
+<pre>IDNA2_CHECK_ASCII = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_BIDI"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_BIDI" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_BIDI .collapse" title="">
+<h2>Check requirements specified in [IDNA2008-BIDI].</h2>
+<pre>IDNA2_CHECK_BIDI = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_COMBINING"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_COMBINING" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_COMBINING .collapse" title="">
+<h2>Check for labels beginning with a combining mark.</h2>
+<pre>IDNA2_CHECK_COMBINING = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_CONTEXTJ"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_CONTEXTJ" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_CONTEXTJ .collapse" title="">
+<h2>Check CONTEXTJ code points.</h2>
+<pre>IDNA2_CHECK_CONTEXTJ = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_CONTEXTO_LOOKUP"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_CONTEXTO_LOOKUP" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_CONTEXTO_LOOKUP .collapse" title="">
+<h2>Check CONTEXTO code points for the lookup protocol.</h2>
+<pre>IDNA2_CHECK_CONTEXTO_LOOKUP = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_CONTEXTO_REGIST"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_CONTEXTO_REGIST" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_CONTEXTO_REGIST .collapse" title="">
+<h2>Check CONTEXTO code points for the registration protocol.</h2>
+<pre>IDNA2_CHECK_CONTEXTO_REGIST = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_HYPHEN"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_HYPHEN" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_HYPHEN .collapse" title="">
+<h2>Check whether the string does not start nor end with HYPHEN_MINUS '-'.</h2>
+<pre>IDNA2_CHECK_HYPHEN = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_HYPHEN34"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_HYPHEN34" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_HYPHEN34 .collapse" title="">
+<h2>Check whether the string contains HYPHEN_MINUS '-' at the 3rd and 4th position.</h2>
+<pre>IDNA2_CHECK_HYPHEN34 = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_LDH"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_LDH" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_LDH .collapse" title="">
+<h2>Apply checks for non-LDH ASCII characters.</h2>
+<pre>IDNA2_CHECK_LDH = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_LENGTH"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_LENGTH" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_LENGTH .collapse" title="">
+<h2>Apply length checks on labels and domain names according to the IDNA standard.</h2>
+<pre>IDNA2_CHECK_LENGTH = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_NFC"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_NFC" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_NFC .collapse" title="">
+<h2>Check labels are in NFC.</h2>
+<pre>IDNA2_CHECK_NFC = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_PROHIBITED"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_PROHIBITED" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_PROHIBITED .collapse" title="">
+<h2>Check for PROHIBITED code points.</h2>
+<pre>IDNA2_CHECK_PROHIBITED = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_STD3"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_STD3" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_STD3 .collapse" title="">
+<h2>Check for Std3 ASCII rules.</h2>
+<pre>IDNA2_CHECK_STD3 = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_CHECK_UNASSIGNED"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_CHECK_UNASSIGNED" data-toggle="collapse" data-target=".constant_IDNA2_CHECK_UNASSIGNED .collapse" title="">
+<h2>Check for UNASSIGNED code points.</h2>
+<pre>IDNA2_CHECK_UNASSIGNED = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_MAP_IDNA2003"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_MAP_IDNA2003" data-toggle="collapse" data-target=".constant_IDNA2_MAP_IDNA2003 .collapse" title="">
+<h2>Perform IDNA 2003 mapping procedures.</h2>
+<pre>IDNA2_MAP_IDNA2003 = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_MAP_IDNA2008"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_MAP_IDNA2008" data-toggle="collapse" data-target=".constant_IDNA2_MAP_IDNA2008 .collapse" title="">
+<h2>Perform IDNA 2008 mapping procedures.</h2>
+<pre>IDNA2_MAP_IDNA2008 = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_MAP_NAMEPREP"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_MAP_NAMEPREP" data-toggle="collapse" data-target=".constant_IDNA2_MAP_NAMEPREP .collapse" title="">
+<h2>Apply the IDNA 2003 Nameprep algorithm.</h2>
+<pre>IDNA2_MAP_NAMEPREP = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_MAP_NFCLOWER"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_MAP_NFCLOWER" data-toggle="collapse" data-target=".constant_IDNA2_MAP_NFCLOWER .collapse" title="">
+<h2>Apply Unicode normalization form C and map characters to lower case.</h2>
+<pre>IDNA2_MAP_NFCLOWER = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_MAP_NFKC"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_MAP_NFKC" data-toggle="collapse" data-target=".constant_IDNA2_MAP_NFKC .collapse" title="">
+<h2>Normalize strings with the Unicode Normalization form KC.</h2>
+<pre>IDNA2_MAP_NFKC = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="constant_IDNA2_MAP_PUNYCODE"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_IDNA2_MAP_PUNYCODE" data-toggle="collapse" data-target=".constant_IDNA2_MAP_PUNYCODE .collapse" title="">
+<h2>Apply the Punycode algorithm.</h2>
+<pre>IDNA2_MAP_PUNYCODE = 0 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.1</a> and<br>
+            generated on 2015-01-27T14:45:37+01:00.<br></footer></div>
+</div>
+</body>
+</html>

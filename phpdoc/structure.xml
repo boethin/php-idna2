@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="php-idna2" version="2.8.1">
+  <partials/>
+  <file path="idna2.php" generated-path="idna2.html" hash="556cf21f9bedde8b03a37b36f28136cf" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <constant namespace="" line="17" package="Default">
+      <name>IDNA2_CHECK_ASCII</name>
+      <full_name>\IDNA2_CHECK_ASCII</full_name>
+      <value>0</value>
+      <docblock line="17">
+        <description>Check whether the string contains non-ASCII characters.</description>
+        <long-description></long-description>
+        <tag name="package" line="17" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="22" package="Default">
+      <name>IDNA2_CHECK_HYPHEN34</name>
+      <full_name>\IDNA2_CHECK_HYPHEN34</full_name>
+      <value>0</value>
+      <docblock line="22">
+        <description>Check whether the string contains HYPHEN_MINUS '-' at the 3rd and 4th position.</description>
+        <long-description></long-description>
+        <tag name="package" line="22" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="27" package="Default">
+      <name>IDNA2_CHECK_HYPHEN</name>
+      <full_name>\IDNA2_CHECK_HYPHEN</full_name>
+      <value>0</value>
+      <docblock line="27">
+        <description>Check whether the string does not start nor end with HYPHEN_MINUS '-'.</description>
+        <long-description></long-description>
+        <tag name="package" line="27" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="32" package="Default">
+      <name>IDNA2_CHECK_LENGTH</name>
+      <full_name>\IDNA2_CHECK_LENGTH</full_name>
+      <value>0</value>
+      <docblock line="32">
+        <description>Apply length checks on labels and domain names according to the IDNA standard.</description>
+        <long-description></long-description>
+        <tag name="package" line="32" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="37" package="Default">
+      <name>IDNA2_CHECK_LDH</name>
+      <full_name>\IDNA2_CHECK_LDH</full_name>
+      <value>0</value>
+      <docblock line="37">
+        <description>Apply checks for non-LDH ASCII characters.</description>
+        <long-description></long-description>
+        <tag name="package" line="37" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="42" package="Default">
+      <name>IDNA2_CHECK_STD3</name>
+      <full_name>\IDNA2_CHECK_STD3</full_name>
+      <value>0</value>
+      <docblock line="42">
+        <description>Check for Std3 ASCII rules.</description>
+        <long-description></long-description>
+        <tag name="package" line="42" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="47" package="Default">
+      <name>IDNA2_CHECK_PROHIBITED</name>
+      <full_name>\IDNA2_CHECK_PROHIBITED</full_name>
+      <value>0</value>
+      <docblock line="47">
+        <description>Check for PROHIBITED code points.</description>
+        <long-description></long-description>
+        <tag name="package" line="47" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="52" package="Default">
+      <name>IDNA2_CHECK_UNASSIGNED</name>
+      <full_name>\IDNA2_CHECK_UNASSIGNED</full_name>
+      <value>0</value>
+      <docblock line="52">
+        <description>Check for UNASSIGNED code points.</description>
+        <long-description></long-description>
+        <tag name="package" line="52" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="57" package="Default">
+      <name>IDNA2_CHECK_COMBINING</name>
+      <full_name>\IDNA2_CHECK_COMBINING</full_name>
+      <value>0</value>
+      <docblock line="57">
+        <description>Check for labels beginning with a combining mark.</description>
+        <long-description></long-description>
+        <tag name="package" line="57" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="62" package="Default">
+      <name>IDNA2_CHECK_BIDI</name>
+      <full_name>\IDNA2_CHECK_BIDI</full_name>
+      <value>0</value>
+      <docblock line="62">
+        <description>Check requirements specified in [IDNA2008-BIDI].</description>
+        <long-description></long-description>
+        <tag name="package" line="62" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="67" package="Default">
+      <name>IDNA2_CHECK_NFC</name>
+      <full_name>\IDNA2_CHECK_NFC</full_name>
+      <value>0</value>
+      <docblock line="67">
+        <description>Check labels are in NFC.</description>
+        <long-description></long-description>
+        <tag name="package" line="67" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="72" package="Default">
+      <name>IDNA2_CHECK_CONTEXTJ</name>
+      <full_name>\IDNA2_CHECK_CONTEXTJ</full_name>
+      <value>0</value>
+      <docblock line="72">
+        <description>Check CONTEXTJ code points.</description>
+        <long-description></long-description>
+        <tag name="package" line="72" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="77" package="Default">
+      <name>IDNA2_CHECK_CONTEXTO_REGIST</name>
+      <full_name>\IDNA2_CHECK_CONTEXTO_REGIST</full_name>
+      <value>0</value>
+      <docblock line="77">
+        <description>Check CONTEXTO code points for the registration protocol.</description>
+        <long-description></long-description>
+        <tag name="package" line="77" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="82" package="Default">
+      <name>IDNA2_CHECK_CONTEXTO_LOOKUP</name>
+      <full_name>\IDNA2_CHECK_CONTEXTO_LOOKUP</full_name>
+      <value>0</value>
+      <docblock line="82">
+        <description>Check CONTEXTO code points for the lookup protocol.</description>
+        <long-description></long-description>
+        <tag name="package" line="82" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="87" package="Default">
+      <name>IDNA2_CHECK_2008_LOOKUP</name>
+      <full_name>\IDNA2_CHECK_2008_LOOKUP</full_name>
+      <value>0</value>
+      <docblock line="87">
+        <description>Check requirements as specified by the IDNA 2008 lookup protocol.</description>
+        <long-description></long-description>
+        <tag name="package" line="87" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="92" package="Default">
+      <name>IDNA2_CHECK_2008_REGIST</name>
+      <full_name>\IDNA2_CHECK_2008_REGIST</full_name>
+      <value>0</value>
+      <docblock line="92">
+        <description>Check requirements as specified by the IDNA 2008 registration protocol.</description>
+        <long-description></long-description>
+        <tag name="package" line="92" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="97" package="Default">
+      <name>IDNA2_MAP_NAMEPREP</name>
+      <full_name>\IDNA2_MAP_NAMEPREP</full_name>
+      <value>0</value>
+      <docblock line="97">
+        <description>Apply the IDNA 2003 Nameprep algorithm.</description>
+        <long-description></long-description>
+        <tag name="package" line="97" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="102" package="Default">
+      <name>IDNA2_MAP_NFKC</name>
+      <full_name>\IDNA2_MAP_NFKC</full_name>
+      <value>0</value>
+      <docblock line="102">
+        <description>Normalize strings with the Unicode Normalization form KC.</description>
+        <long-description></long-description>
+        <tag name="package" line="102" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="107" package="Default">
+      <name>IDNA2_MAP_NFCLOWER</name>
+      <full_name>\IDNA2_MAP_NFCLOWER</full_name>
+      <value>0</value>
+      <docblock line="107">
+        <description>Apply Unicode normalization form C and map characters to lower case.</description>
+        <long-description></long-description>
+        <tag name="package" line="107" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="112" package="Default">
+      <name>IDNA2_MAP_PUNYCODE</name>
+      <full_name>\IDNA2_MAP_PUNYCODE</full_name>
+      <value>0</value>
+      <docblock line="112">
+        <description>Apply the Punycode algorithm.</description>
+        <long-description></long-description>
+        <tag name="package" line="112" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="117" package="Default">
+      <name>IDNA2_MAP_IDNA2003</name>
+      <full_name>\IDNA2_MAP_IDNA2003</full_name>
+      <value>0</value>
+      <docblock line="117">
+        <description>Perform IDNA 2003 mapping procedures.</description>
+        <long-description></long-description>
+        <tag name="package" line="117" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="122" package="Default">
+      <name>IDNA2_MAP_IDNA2008</name>
+      <full_name>\IDNA2_MAP_IDNA2008</full_name>
+      <value>0</value>
+      <docblock line="122">
+        <description>Perform IDNA 2008 mapping procedures.</description>
+        <long-description></long-description>
+        <tag name="package" line="122" description="Default"/>
+      </docblock>
+    </constant>
+    <function namespace="" line="133" package="Default">
+      <name>idna2_to_utf8</name>
+      <full_name>\idna2_to_utf8()</full_name>
+      <docblock line="133">
+        <description>Get UTF-8 encoded string from an array of Unicode codepoints.</description>
+        <long-description>This is the reverse of [idna2_from_utf8()](/namespaces/default.html#function_idna2_from_utf8).</long-description>
+        <tag name="package" line="133" description="Default"/>
+        <tag name="param" line="133" description="&lt;p&gt;An array of integers representing Unicode code points.&lt;/p&gt;" type="array" variable="$codepoints">
+          <type>array</type>
+        </tag>
+        <tag name="return" line="133" description="" type="string">
+          <type>string</type>
+        </tag>
+        <tag name="see" line="133" description="" link="\idna2_from_utf8"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$codepoints</name>
+        <default></default>
+        <type>array</type>
+      </argument>
+    </function>
+    <function namespace="" line="142" package="Default">
+      <name>idna2_from_utf8</name>
+      <full_name>\idna2_from_utf8()</full_name>
+      <docblock line="142">
+        <description>Convert an UTF-8 encoded string to an array of Unicode code points.</description>
+        <long-description></long-description>
+        <tag name="package" line="142" description="Default"/>
+        <tag name="param" line="142" description="" type="string" variable="$label">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="142" description="" type="array">
+          <type>array</type>
+        </tag>
+        <tag name="see" line="142" description="" link="\idna2_to_utf8"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$label</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="152" package="Default">
+      <name>idna2_labels</name>
+      <full_name>\idna2_labels()</full_name>
+      <docblock line="152">
+        <description>Split a domain name into labels.</description>
+        <long-description>The IDNA label delimiters '.', U+3002, U+FF0E, U+FF61 are considered.</long-description>
+        <tag name="package" line="152" description="Default"/>
+        <tag name="param" line="152" description="" type="string" variable="$domain">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="152" description="" type="array">
+          <type>array</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$domain</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="164" package="Default">
+      <name>idna2_punycode_encode</name>
+      <full_name>\idna2_punycode_encode()</full_name>
+      <docblock line="164">
+        <description>Apply the Puncode algorithm to a UTF-8 string.</description>
+        <long-description>Note that strings are considered without the "xn--" prefix here.
+
+This is the reverse of [idna2_punycode_decode()](/namespaces/default.html#function_idna2_punycode_decode)</long-description>
+        <tag name="package" line="164" description="Default"/>
+        <tag name="param" line="164" description="&lt;p&gt;Unicode label&lt;/p&gt;" type="string" variable="$label">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="164" description="" type="string|false">
+          <type>string</type>
+          <type>false</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$label</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="176" package="Default">
+      <name>idna2_punycode_decode</name>
+      <full_name>\idna2_punycode_decode()</full_name>
+      <docblock line="176">
+        <description>Decode an ASCII string by way of the Puncode algorithm.</description>
+        <long-description>Note that strings are considered without the "xn--" prefix here.
+
+This is the reverse of [idna2_punycode_encode()](/namespaces/default.html#function_idna2_punycode_encode)</long-description>
+        <tag name="package" line="176" description="Default"/>
+        <tag name="param" line="176" description="&lt;p&gt;Encoded ASCII label&lt;/p&gt;" type="string" variable="$label">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="176" description="" type="string|false">
+          <type>string</type>
+          <type>false</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$label</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="185" package="Default">
+      <name>idna2_nameprep</name>
+      <full_name>\idna2_nameprep()</full_name>
+      <docblock line="185">
+        <description>Apply the Nameprep Algorithm (IDNA 2003).</description>
+        <long-description></long-description>
+        <tag name="package" line="185" description="Default"/>
+        <tag name="param" line="185" description="" type="string" variable="$domain">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="185" description="&lt;p&gt;Whether to allow UNASSIGNED code points.&lt;/p&gt;" type="boolean" variable="$allowUnassigned">
+          <type>boolean</type>
+        </tag>
+        <tag name="return" line="185" description="" type="string">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$domain</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$allowUnassigned</name>
+        <default>false</default>
+        <type>boolean</type>
+      </argument>
+    </function>
+    <function namespace="" line="195" package="Default">
+      <name>idna2_to_ascii</name>
+      <full_name>\idna2_to_ascii()</full_name>
+      <docblock line="195">
+        <description>IDNA 2003 ToAscii method.</description>
+        <long-description></long-description>
+        <tag name="package" line="195" description="Default"/>
+        <tag name="param" line="195" description="" type="string" variable="$domain">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="195" description="&lt;p&gt;Whether to allow UNASSIGNED code points.&lt;/p&gt;" type="boolean" variable="$allowUnassigned">
+          <type>boolean</type>
+        </tag>
+        <tag name="param" line="195" description="&lt;p&gt;Whether to apply Std3ASCII rules.&lt;/p&gt;" type="boolean" variable="$useStd3Ascii">
+          <type>boolean</type>
+        </tag>
+        <tag name="return" line="195" description="" type="string">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$domain</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$allowUnassigned</name>
+        <default>false</default>
+        <type>boolean</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$useStd3Ascii</name>
+        <default>true</default>
+        <type>boolean</type>
+      </argument>
+    </function>
+    <function namespace="" line="205" package="Default">
+      <name>idna2_to_unicode</name>
+      <full_name>\idna2_to_unicode()</full_name>
+      <docblock line="205">
+        <description>IDNA 2003 ToUnicode method.</description>
+        <long-description></long-description>
+        <tag name="package" line="205" description="Default"/>
+        <tag name="param" line="205" description="" type="string" variable="$domain">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="205" description="&lt;p&gt;Whether to allow UNASSIGNED code points.&lt;/p&gt;" type="boolean" variable="$allowUnassigned">
+          <type>boolean</type>
+        </tag>
+        <tag name="param" line="205" description="&lt;p&gt;Whether to apply Std3ASCII rules.&lt;/p&gt;" type="boolean" variable="$useStd3Ascii">
+          <type>boolean</type>
+        </tag>
+        <tag name="return" line="205" description="" type="string">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$domain</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$allowUnassigned</name>
+        <default>false</default>
+        <type>boolean</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$useStd3Ascii</name>
+        <default>true</default>
+        <type>boolean</type>
+      </argument>
+    </function>
+    <function namespace="" line="213" package="Default">
+      <name>idna2_encode</name>
+      <full_name>\idna2_encode()</full_name>
+      <docblock line="213">
+        <description>Generic IDNA 2008 domain encoding.</description>
+        <long-description></long-description>
+        <tag name="package" line="213" description="Default"/>
+        <tag name="param" line="213" description="" type="string" variable="$domain">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="213" description="" type="string">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$domain</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="221" package="Default">
+      <name>idna2_decode</name>
+      <full_name>\idna2_decode()</full_name>
+      <docblock line="221">
+        <description>Generic IDNA 2008 domain decoding.</description>
+        <long-description></long-description>
+        <tag name="package" line="221" description="Default"/>
+        <tag name="param" line="221" description="" type="string" variable="$domain">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="221" description="" type="string">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$domain</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="233" package="Default">
+      <name>idna2_test</name>
+      <full_name>\idna2_test()</full_name>
+      <docblock line="233">
+        <description>Test an UTF-8 encoded string against various IDNA requirements, specified by the flags parameter.</description>
+        <long-description>The return value contains</long-description>
+        <tag name="package" line="233" description="Default"/>
+        <tag name="param" line="233" description="" type="string" variable="$domain">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="233" description="" type="integer" variable="$flags">
+          <type>integer</type>
+        </tag>
+        <tag name="return" line="233" description="" type="integer">
+          <type>integer</type>
+        </tag>
+        <tag name="see" line="233" description="constants" link="\IDNA2_*"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$domain</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$flags</name>
+        <default></default>
+        <type>integer</type>
+      </argument>
+    </function>
+    <function namespace="" line="240" package="Default">
+      <name>idna2_error</name>
+      <full_name>\idna2_error()</full_name>
+      <docblock line="240">
+        <description>Get error message from last function call.</description>
+        <long-description></long-description>
+        <tag name="package" line="240" description="Default"/>
+        <tag name="return" line="240" description="" type="string|false">
+          <type>string</type>
+          <type>false</type>
+        </tag>
+      </docblock>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="133" code="PPC:ERR-50015">Argument $codepoints is missing from the Docblock of idna2_to_utf8</error>
+      <error line="142" code="PPC:ERR-50015">Argument $label is missing from the Docblock of idna2_from_utf8</error>
+      <error line="152" code="PPC:ERR-50015">Argument $domain is missing from the Docblock of idna2_labels</error>
+      <error line="164" code="PPC:ERR-50015">Argument $label is missing from the Docblock of idna2_punycode_encode</error>
+      <error line="176" code="PPC:ERR-50015">Argument $label is missing from the Docblock of idna2_punycode_decode</error>
+      <error line="185" code="PPC:ERR-50015">Argument $domain is missing from the Docblock of idna2_nameprep</error>
+      <error line="195" code="PPC:ERR-50015">Argument $domain is missing from the Docblock of idna2_to_ascii</error>
+      <error line="205" code="PPC:ERR-50015">Argument $domain is missing from the Docblock of idna2_to_unicode</error>
+      <error line="213" code="PPC:ERR-50015">Argument $domain is missing from the Docblock of idna2_encode</error>
+      <error line="221" code="PPC:ERR-50015">Argument $domain is missing from the Docblock of idna2_decode</error>
+      <error line="233" code="PPC:ERR-50015">Argument $domain is missing from the Docblock of idna2_test</error>
+    </parse_markers>
+    <source>eJzdWOtO40YU/s9TjBASl3IrWVWou7SEJJAUcCKSaLtqq2hinyQj7BnveEyg232tvkBfrGdmbMdObAgtUqUiRMAz833nfOcyx3z4MZyFG/DI1M7mYMYigt+URCoekwnzgUyEJLijKdw4AK6E/JVv7r7f2Dja29sge6TX7pFO06kTeFTAIyY4PtULdbOUPTU4HlCf8SmZMzUjjCuQnCpcxKe/g0c8EVDGCacBRPsklOKBeXr7WOB2Q3JyfFwjlHvZX6d6mwtRpPdNYu5quOiQJEacRwBkplT4/dHRfD4/fOQHB5blkIMyO2isZmhaH8Y0UoxycvHXn2qGZnwYC9C/nBcP/YCnjjYy/xszcO/JfIZbQRL8gdJJbYwruMIjEeGCH9T7jU6HuDMqqYteWwOPNnBPpIwvJ6NGu9W4HtmNZ+T4/SsY2p967ZYzuu04wz7ZPtgmVJl9NekZsd6hfKGImNbmsILYYtTercntCdCeKfybSoW/SQLIZAK7bM7zlEXCehj6T8QHPkUgV7NHBJPHp2PwI+NMPkkIdV0hTY4oYcwzeYE2cY9Kr4r4puVcDdplxAmjzlUdtptmm6yErgq02S7TTkP1lVdLcGTsQyVEf9CsVWH07rrtzkVn0Gpi3D3AeGL9VCLldlfgDZ16v9+5ctbDy+2uwEsiNIYp4zyrcYrgwZiZBwGV91X4je7tRcfpOFdl8BI+x0yC7j4RiUJw2YRht8Ak+MVgYBc4uOg0O79VoevFMuA0qyRoMOeyUQWAS2XnG11n0Pp58NM6CmZ7q3G6eRwjqs5oiYpi0Zk+qZudEq7wX2Dpju5aV53+4NVkvhD3cbg+zU23ez3svRg0mo/b+GlRqaaDr0mq974N4askNbRlctqOkUeuEQe7UighJNSfCokVEKzC3tZ7I6d+2+rdtZYccYQMzFWYdNnIFpGmGHJm4pVusbZj2AJyXZK2huPyulFmcQrFV6EapsMGNMz1O91ZfTHH9u/SCKqoGjfdj627KoF6MX8ynC/I0hs6nxrdZquI0wNprFvIjBaGuqWYu9+LZVlL1XhJe6g9j3f6WrzTIt4VKDIcXB6c4hWovfTSS3IiRYCKYoOR9ImISSa9/rFoFxojnbxsxT+g7qAPfDnHeemeMI/Tk5GGG8Vqcrqz+zU9dx5inIKEYWuBS+o5Wj1pTXUopU7OCCtEW5c3Jte8yLkEFUueOJFNUUs2GH3SgStZVMKal7Njl3z5uihUwdEzpSUp1QszrUotUpQrcTs5t2Uaed52g7FkemJdmeELZS1Uwep+6DO0OT94aEVFcn0sIpg0AvMYR12fBcwU0Pbh9j4ZflM7Pj7Rn5eXxy37+d235u7RWcY8kOBVuGeZy/xb8cTatJMcKfhRKMdiNRrlk5hY0tQSRyjAM1RlLaloselQIrbz5qaelDeximDCHglOjPCa9A6TJjHyQH9gkj8T7Cw5VkJvt/0xoX4EZQplNDb5yiLeBCsPT4a2hBnvkbnNzFIR/0vJEl+el6yVVJt16p8Ll8SnRLhFimUXYT3LsZ2sf+++nOd2YSyEDxiGLerjFTTkFN/zphxd+Ji+kWDe6qVnxtnVfrbiGU+MTctmf5nvzIhScHVxGQ1EPXIZIwGaJNYo4bd0bQkrjkC/a1h78kAmLmap+BayhjjYNqnGe0Gc/QL5mZJxtV5p7f5/FYuth/9SsyvgIJmbG1SSO8iUe65Lv3hfVBubdsGSC6OS3jSAt6FPe0kJ/QCi6lGBTvV/PhR5oJKJOLI25l8B9ldfACY+xWZsbAW8mPMXd2LnA/VjyP6vsmZeYm6RLYOddxmfZvOHHSD3zB2gqJ7OStMG/V0kjAFcCociICW+qQUQRXQKdr70KcqQQbmYaFlY1mzsBnTHcpmvvwE5lks7</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
+  <deprecated count="0"/>
+</project>
