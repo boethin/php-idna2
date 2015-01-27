@@ -1,1 +1,109 @@
-hello world
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>php-idna2 by boethin</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>php-idna2</h1>
+        <p>A PHP extension providing IDNA 2008 processing functions based on the idnkit-2 library from JPRS</p>
+
+        <p class="view"><a href="https://github.com/boethin/php-idna2">View the Project on GitHub <small>boethin/php-idna2</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/boethin/php-idna2/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/boethin/php-idna2/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/boethin/php-idna2">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="php-idna2" class="anchor" href="#php-idna2" aria-hidden="true"><span class="octicon octicon-link"></span></a>php-idna2</h1>
+
+<p>PHP IDNA extension</p>
+
+<p>PHP extension for dealing with internationalized domain names, providing both IDNA 2003 and IDNA 2008 processing functions.</p>
+
+<h2>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
+
+<p>Dealing with Internationalized Domain Names (IDN) basically means to encode Non-ASCII domain labels into ASCII-compatible encoding (prefixed with "xn--") and vice versa. For example, the domain name name <em><a href="http://www.b%C3%B6thin.de">www.böthin.de</a></em> is encoded to <em><a href="http://www.xn--bthin-jua.de">www.xn--bthin-jua.de</a></em> by way of the well known Punycode algorithm. However, the question of how to consider arbitrary Unicode strings as domain labels in general is more complex and has to do with normalization processes and Unicode character classifications.</p>
+
+<p>This extension makes the functionallity of two C-librarys available: </p>
+
+<ul>
+<li>GNU Libidn (IDNA 2003) and </li>
+<li>Idnkit-2 from the JPRS registry (IDNA 2008).</li>
+</ul>
+
+<p>There is an online <a href="http://xn--domain.net">IDN tool</a> based on this extension.</p>
+
+<p>Note:</p>
+
+<p>This is an experimantal tool suitable for dealing with advanced IDNA tasks. For more simple tasks, there are other solutions for handling IDN in PHP, for example <a href="http://php.net/manual/en/ref.intl.idn.php">PHP's intl framework</a>.</p>
+
+<h2>
+<a id="sample-usage" class="anchor" href="#sample-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample usage</h2>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2">    <span class="pl-c">// 㯙㯜㯙㯟 is the Punycode decoded string of "domain"</span></span>
+<span class="pl-s2">    <span class="pl-vo">$utf8</span> <span class="pl-k">=</span> idna2_to_utf8(<span class="pl-s3">array</span>(<span class="pl-c1">0x3BD9</span>,<span class="pl-c1">0x3BDC</span>,<span class="pl-c1">0x3BD9</span>,<span class="pl-c1">0x3BDF</span>));</span>
+<span class="pl-s2">    <span class="pl-s3">assert</span>(<span class="pl-vo">$utf8</span> <span class="pl-k">===</span> <span class="pl-s1"><span class="pl-pds">"</span><span class="pl-c1">\xe3\xaf\x99\xe3\xaf\x9c\xe3\xaf\x99\xe3\xaf\x9f</span><span class="pl-pds">"</span></span>);</span>
+<span class="pl-s2">    <span class="pl-vo">$codepoints</span> <span class="pl-k">=</span> idna2_from_utf8(<span class="pl-vo">$utf8</span>); <span class="pl-c">// array(0x3BD9,0x3BDC,0x3BD9,0x3BDF)</span></span>
+<span class="pl-s2"></span>
+<span class="pl-s2">    <span class="pl-vo">$punycode</span> <span class="pl-k">=</span> idna2_punycode_encode(<span class="pl-vo">$utf8</span>);</span>
+<span class="pl-s2">    <span class="pl-s3">assert</span>(<span class="pl-vo">$punycode</span> <span class="pl-k">===</span> <span class="pl-s1"><span class="pl-pds">"</span>domain<span class="pl-pds">"</span></span>); </span>
+<span class="pl-s2">    <span class="pl-s3">assert</span>(<span class="pl-vo">$utf8</span> <span class="pl-k">===</span> idna2_punycode_decode(<span class="pl-vo">$punycode</span>));</span>
+<span class="pl-s2"></span>
+<span class="pl-s2">    <span class="pl-vo">$encoded</span> <span class="pl-k">=</span> idna2_encode(<span class="pl-s1"><span class="pl-pds">"</span>㯙㯜㯙㯟.net<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s2">    <span class="pl-s3">assert</span>(<span class="pl-s1"><span class="pl-pds">"</span>xn--domain.net<span class="pl-pds">"</span></span> <span class="pl-k">===</span> <span class="pl-vo">$encoded</span>);</span>
+<span class="pl-s2"></span></pre></div>
+
+<p>See the <a href="http://boethin.github.io/php-idna2/phpdoc/packages/Default.html">API documentation</a> for an overview.</p>
+
+<h2>
+<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h2>
+
+<ul>
+<li>Install the <a href="http://www.gnu.org/software/libidn/">GNU Libidn library</a>
+</li>
+<li>Install the <a href="http://jprs.co.jp/idn/index-e.html">idnkit-2.3 library</a>
+</li>
+<li>You need the PHP5 developer tools (phpize) in order to build the extension.</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Within the source directory, the following should work:</p>
+
+<pre><code>$ phpize
+$ ./configure
+$ make
+$ make install
+</code></pre>
+
+<p>After successful installation you should have <em>idna2.so</em> within your php extension directory. In order to make this extension usable to your php code, add the following line to your php.ini:</p>
+
+<pre><code>extension=idna2.so
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/boethin">boethin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
